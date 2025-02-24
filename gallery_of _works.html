@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+		<!-- Подключение Bootstrap 5 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<!-- Шрифты -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- lightGallery -->
+		<link rel="stylesheet" href="assets/css/lightgallery.css" />
+		<!-- AOS анимации -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+		<!-- Основной css-файл -->
+		<link rel="stylesheet" href="assets/css/styles.css" />
+
+		<title>Галерея работ Bleach Moscow</title>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<div class="container-fluid">
+					<div class="header-line d-flex">
+						<div class="header-logo">
+							<a href="index.html"
+								><img src="assets/img/noroot.png" alt=""
+							/></a>
+						</div>
+						<div class="header-links d-flex">
+							<div class="header-link">
+								<a href="uslugi.html"></a>
+								<div class="dropdown header-dropdown">
+									<button
+										class="btn dropdown-toggle"
+										type="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										<a href="">Услуги</a>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="uslugi.html">Услуги</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="loro_piana.html"
+												>Сервис Loro Piana</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="header-link">
+								<a href="gallery_of _works.html">Примеры работ</a>
+							</div>
+							<div class="header-link">
+								<a href="#work">Как мы работаем</a>
+							</div>
+							<div class="header-link">
+								<a href="#contacts">Контакты</a>
+							</div>
+						</div>
+						<div class="header-phone">
+							<a href="tel:79254350101">+7 (925) 435-01-01</a>
+						</div>
+						<div class="header-icons d-flex">
+							<div class="header-icon">
+								<a href="https://www.instagram.com/bleach.moscow"
+									><i class="fa-brands fa-instagram"></i
+								></a>
+							</div>
+							<div class="header-icon">
+								<a href="https://wa.me//79254350101"
+									><i class="fa-brands fa-whatsapp"></i
+								></a>
+							</div>
+							<div class="header-icon">
+								<a href="https://t.me/bleach_moscow"
+									><i class="fa-brands fa-telegram"></i
+								></a>
+							</div>
+						</div>
+						<a
+							href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+							class="header-button"
+							>Рассчитать стоимость</a
+						>
+					</div>
+				</div>
+			</div>
+			<div class="header-980px">
+				<div class="container-fluid d-flex">
+					<div class="header-980px-logo">
+						<h3>BLEACH MOSCOW</h3>
+					</div>
+					<div
+						class="burger-menu"
+						onclick="toggleMenu()"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseExample"
+						aria-expanded="false"
+						aria-controls="collapseExample"
+					>
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</div>
+			</div>
+			<div class="header-640px">
+				<div class="container-fluid d-flex">
+					<div class="header-640px-logo">
+						<a href="index.html"
+							><img src="assets/img/Mask_group_97.png" alt=""
+						/></a>
+					</div>
+					<div class="burger-menu2" onclick="toggleMenu2(), toggleBlock()">
+						<div class="bar2"></div>
+						<div class="bar2"></div>
+						<div class="bar2"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="collapse mobile-menu" id="collapseExample">
+			<div class="card card-body" style="color: #000">
+				<div class="header-line d-flex">
+					<div class="header-logo">
+						<a href="index.html"><img src="assets/img/noroot.png" alt="" /></a>
+					</div>
+					<div class="header-links d-flex">
+						<div class="header-link">
+							<a href="uslugi.html">Услуги</a>
+						</div>
+						<div class="header-link">
+							<a href="loro_piana.html">Сервис Loro Piana</a>
+						</div>
+						<div class="header-link">
+							<a href="gallery_of _works.html">Примеры работ</a>
+						</div>
+						<div class="header-link">
+							<a href="#work">Как мы работаем</a>
+						</div>
+						<div class="header-link">
+							<a href="#contacts">Контакты</a>
+						</div>
+					</div>
+					<div class="header-phone">
+						<a href="tel:79254350101">+7 (925) 435-01-01</a>
+					</div>
+					<div class="header-icons d-flex">
+						<div class="header-icon">
+							<a href="https://www.instagram.com/bleach.moscow"
+								><i class="fa-brands fa-instagram"></i
+							></a>
+						</div>
+						<div class="header-icon">
+							<a href="https://wa.me//79254350101"
+								><i class="fa-brands fa-whatsapp"></i
+							></a>
+						</div>
+						<div class="header-icon">
+							<a href="https://t.me/bleach_moscow"
+								><i class="fa-brands fa-telegram"></i
+							></a>
+						</div>
+					</div>
+					<a
+						href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+						class="header-button"
+						>Рассчитать стоимость</a
+					>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu2" id="myBlock">
+			<div class="header-line d-flex">
+				<div class="header-links d-flex">
+					<div class="header-link">
+						<a href="uslugi.html">Услуги</a>
+					</div>
+					<div class="header-link">
+						<a href="loro_piana.html">Сервис Loro Piana</a>
+					</div>
+					<div class="header-link">
+						<a href="gallery_of _works.html">Примеры работ</a>
+					</div>
+					<div class="header-link">
+						<a href="#work">Как мы работаем</a>
+					</div>
+					<div class="header-link">
+						<a href="#contacts">Контакты</a>
+					</div>
+				</div>
+				<div class="header-phone">
+					<a href="tel:79254350101">+7 (925) 435-01-01</a>
+				</div>
+				<div class="header-icons d-flex">
+					<div class="header-icon">
+						<a href="tel:79254350101"
+							><i class="fa-solid fa-phone-volume"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://www.instagram.com/bleach.moscow"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://wa.me//79254350101"
+							><i class="fa-brands fa-whatsapp"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://t.me/bleach_moscow"
+							><i class="fa-brands fa-telegram"></i
+						></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main>
+			<section class="gallery-slide">
+				<div class="container-fluid">
+					<div class="gallery-slide-title">
+						<h3>ГАЛЕРЕЯ РАБОТ</h3>
+						<h3>BLEACH MOSCOW</h3>
+					</div>
+					<div class="gallery-slide-subtitle">
+						<p>Больше примеров работ в формате <span>До/После,</span></p>
+						<p>
+							а также примеры работ с другими изделиями из кожи и замши у нас в
+							<a href="https://www.instagram.com/bleach.moscow/">Инстаграм*</a>
+						</p>
+						<p>
+							<span class="snoska"
+								>*организация, признанная экстремистской на территории
+								Российской Федерации</span
+							>
+						</p>
+					</div>
+				</div>
+				<div id="lightgallery">
+					<a href="assets/img/gallery_img/IMG_1258.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_1258.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_2388.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_2388.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_2447.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_2447.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_2449.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_2449.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_2457.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_2457.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_2459.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_2459.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_2478.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_2478.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_2810.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_2810.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_2814.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_2814.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_2976.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_2976.PNG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_3711.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_3711.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_4584.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_4584.PNG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_6185.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_6185.PNG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_7376.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_7376.PNG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_7487.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_7487.PNG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_7905.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_7905.PNG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_8164.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_8164.PNG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_8467.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_8467.PNG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_8589.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_8589.PNG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_9244.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_9244.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_9453.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_9453.PNG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_6568.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_6568.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_6570.JPG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_6570.JPG" />
+					</a>
+					<a href="assets/img/gallery_img/IMG_6569.PNG" class="gallery-image">
+						<img src="assets/img/gallery_img/IMG_6569.PNG" />
+					</a>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer">
+				<div class="container-fluid">
+					<div class="footer-logo">
+						<img src="assets/img/bleach_logo.png" alt="" />
+					</div>
+					<div class="footer-text">
+						<p>© BLEACH MOSCOW 2018</p>
+						<p>Все права защищены</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init()
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="assets/js/lightgallery.min.js"></script>
+		<script src="assets/js/lg-thumbnail.min.js"></script>
+		<script src="assets/js/lg-zoom.min.js"></script>
+		<script>
+			lightGallery(document.getElementById('lightgallery'))
+		</script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+		<!-- Подключение Bootstrap 5 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<!-- Шрифты -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- AOS анимации -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+		<!-- Основной css-файл -->
+		<link rel="stylesheet" href="assets/css/styles.css" />
+
+		<title>Восстановление подошвы LoroPiana</title>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<div class="container-fluid">
+					<div class="header-line d-flex">
+						<div class="header-logo">
+							<a href="index.html"
+								><img src="assets/img/noroot.png" alt=""
+							/></a>
+						</div>
+						<div class="header-links d-flex">
+							<div class="header-link">
+								<a href="uslugi.html"></a>
+								<div class="dropdown header-dropdown">
+									<button
+										class="btn dropdown-toggle"
+										type="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										<a href="">Услуги</a>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="uslugi.html">Услуги</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="loro_piana.html"
+												>Сервис Loro Piana</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="header-link">
+								<a href="gallery_of _works.html">Примеры работ</a>
+							</div>
+							<div class="header-link">
+								<a href="#work">Как мы работаем</a>
+							</div>
+							<div class="header-link">
+								<a href="#contacts">Контакты</a>
+							</div>
+						</div>
+						<div class="header-phone">
+							<a href="tel:79254350101">+7 (925) 435-01-01</a>
+						</div>
+						<div class="header-icons d-flex">
+							<div class="header-icon">
+								<a href="https://www.instagram.com/bleach.moscow"
+									><i class="fa-brands fa-instagram"></i
+								></a>
+							</div>
+							<div class="header-icon">
+								<a href="https://wa.me//79254350101"
+									><i class="fa-brands fa-whatsapp"></i
+								></a>
+							</div>
+							<div class="header-icon">
+								<a href="https://t.me/bleach_moscow"
+									><i class="fa-brands fa-telegram"></i
+								></a>
+							</div>
+						</div>
+						<a
+							href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+							class="header-button"
+							>Рассчитать стоимость</a
+						>
+					</div>
+				</div>
+			</div>
+			<div class="header-980px">
+				<div class="container-fluid d-flex">
+					<div class="header-980px-logo">
+						<h3>BLEACH MOSCOW</h3>
+					</div>
+					<div
+						class="burger-menu"
+						onclick="toggleMenu()"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseExample"
+						aria-expanded="false"
+						aria-controls="collapseExample"
+					>
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</div>
+			</div>
+			<div class="header-640px">
+				<div class="container-fluid d-flex">
+					<div class="header-640px-logo">
+						<a href="index.html"
+							><img src="assets/img/Mask_group_97.png" alt=""
+						/></a>
+					</div>
+					<div class="burger-menu2" onclick="toggleMenu2(), toggleBlock()">
+						<div class="bar2"></div>
+						<div class="bar2"></div>
+						<div class="bar2"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="collapse mobile-menu" id="collapseExample">
+			<div class="card card-body" style="color: #000">
+				<div class="header-line d-flex">
+					<div class="header-logo">
+						<a href="index.html"><img src="assets/img/noroot.png" alt="" /></a>
+					</div>
+					<div class="header-links d-flex">
+						<div class="header-link">
+							<a href="uslugi.html">Услуги</a>
+						</div>
+						<div class="header-link">
+							<a href="loro_piana.html">Сервис Loro Piana</a>
+						</div>
+						<div class="header-link">
+							<a href="gallery_of _works.html">Примеры работ</a>
+						</div>
+						<div class="header-link">
+							<a href="#work">Как мы работаем</a>
+						</div>
+						<div class="header-link">
+							<a href="#contacts">Контакты</a>
+						</div>
+					</div>
+					<div class="header-phone">
+						<a href="tel:79254350101">+7 (925) 435-01-01</a>
+					</div>
+					<div class="header-icons d-flex">
+						<div class="header-icon">
+							<a href="https://www.instagram.com/bleach.moscow"
+								><i class="fa-brands fa-instagram"></i
+							></a>
+						</div>
+						<div class="header-icon">
+							<a href="https://wa.me//79254350101"
+								><i class="fa-brands fa-whatsapp"></i
+							></a>
+						</div>
+						<div class="header-icon">
+							<a href="https://t.me/bleach_moscow"
+								><i class="fa-brands fa-telegram"></i
+							></a>
+						</div>
+					</div>
+					<a
+						href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+						class="header-button"
+						>Рассчитать стоимость</a
+					>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu2" id="myBlock">
+			<div class="header-line d-flex">
+				<div class="header-links d-flex">
+					<div class="header-link">
+						<a href="uslugi.html">Услуги</a>
+					</div>
+					<div class="header-link">
+						<a href="loro_piana.html">Сервис Loro Piana</a>
+					</div>
+					<div class="header-link">
+						<a href="gallery_of _works.html">Примеры работ</a>
+					</div>
+					<div class="header-link">
+						<a href="#work">Как мы работаем</a>
+					</div>
+					<div class="header-link">
+						<a href="#contacts">Контакты</a>
+					</div>
+				</div>
+				<div class="header-phone">
+					<a href="tel:79254350101">+7 (925) 435-01-01</a>
+				</div>
+				<div class="header-icons d-flex">
+					<div class="header-icon">
+						<a href="tel:79254350101"
+							><i class="fa-solid fa-phone-volume"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://www.instagram.com/bleach.moscow"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://wa.me//79254350101"
+							><i class="fa-brands fa-whatsapp"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://t.me/bleach_moscow"
+							><i class="fa-brands fa-telegram"></i
+						></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main>
+			<section
+				class="first-slide LoroPiana"
+				style="background-image: url('assets/img/IMG_3990-_1_.jpg')"
+			>
+				<div class="container-fluid">
+					<div class="fs-title">
+						<h2>Восстановление обуви <span>Loro Piana</span></h2>
+					</div>
+					<div class="fs-subtitle">
+						<p><span>Эксклюзивная</span> услуга по замене подошвы</p>
+					</div>
+					<div class="fs-line d-flex">
+						<div class="fs-line_first">
+							<div class="fs-line-icon">
+								<a href="https://www.instagram.com/bleach.moscow"
+									><i class="fa-brands fa-instagram"></i
+								></a>
+							</div>
+							<div class="fs-line-icon">
+								<a href="https://t.me/bleach_moscow"
+									><i class="fa-brands fa-telegram"></i
+								></a>
+							</div>
+							<div class="fs-line_line"></div>
+							<div class="fs-line-text">
+								<p>мы в соцсетях</p>
+							</div>
+						</div>
+						<div class="fs-line_second">
+							<a
+								href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+								class="fs-line_second_button"
+								><p>Рассчитать стоимость</p></a
+							>
+						</div>
+						<div class="fs-line_third">
+							<img src="assets/img/Linked_Path_Group.png" alt="" />
+						</div>
+					</div>
+					<div class="fs-arrow">
+						<div class="arrow"></div>
+					</div>
+				</div>
+			</section>
+			<section class="lp-ss">
+				<div class="container-fluid row">
+					<div class="lp-ss-left col-lg-6">
+						<div class="lp-ss-title">
+							<h3>МЫ — РАЗРАБОТЧИКИ <span>АВТОРСКОЙ</span></h3>
+							<h3><span>ТЕХНОЛОГИИ</span> ЗАМЕНЫ ПОДОШВЫ</h3>
+							<h3>НА ОБУВИ ОТ БРЕНДА LOROPIANA</h3>
+						</div>
+						<div class="lp-ss-text">
+							<p>
+								Мы предлагаем полный комплект услуг для вашей пары: чистка,
+								покраска, ремонт и замена подошвы для вашей пары Loro Piana.
+								Наша компания гарантирует высокое качество работы и прозрачность
+								во всех вопросах, связанных с ремонтом вашей обуви.
+							</p>
+							<p>
+								Для нас нет невыполнимых задач - есть только цель выполнить
+								работу качественно.
+							</p>
+						</div>
+						<div class="lp-ss-img d-flex">
+							<div class="comparison">
+								<div class="before">
+									<p>до</p>
+								</div>
+								<div class="angle">
+									<img src="assets/img/Mask_group_8.png" alt="" />
+								</div>
+								<div class="after">
+									<p>после</p>
+								</div>
+							</div>
+							<img src="assets/img/Remove-bgai_17006580.png" alt="" />
+						</div>
+					</div>
+					<div class="lp-ss-right col-lg-6">
+						<div class="lp-video">
+							<div style="padding: 177.78% 0 0 0; position: relative">
+								<iframe
+									src="https://player.vimeo.com/video/887256825?h=575a03d33e&autoplay=1&loop=1&title=0"
+									style="
+										position: absolute;
+										top: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										border-radius: 16px;
+									"
+									frameborder="0"
+									allow="autoplay; fullscreen; picture-in-picture"
+									allowfullscreen
+								></iframe>
+							</div>
+							<script src="https://player.vimeo.com/api/player.js"></script>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="lp-ts">
+				<div class="container-fluid">
+					<div class="lp-ts-card">
+						<div class="lp-ts-card-title">
+							<h3>ЗАМЕНА ПОДОШВЫ</h3>
+						</div>
+						<div class="lp-ts-card-sutitle">
+							<p>
+								Частая проблема дорогостоящей обуви от бренда Loro Piana -
+								оригинальная подошва очень быстро желтеет, теряя товарный вид. К
+								сожалению, воздейстовать химией на подошву для приобретения
+								заводского состояния нельзя
+							</p>
+						</div>
+						<div class="lp-ts-card-text">
+							<p>Но в Bleach мы можем</p>
+							<p>заменить подошву на новую,</p>
+							<p>идентичную оригинальной!</p>
+						</div>
+						<a
+							href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+							class="lp-ts-card-button"
+						>
+							<p>Оставить заявку</p>
+						</a>
+
+						<div class="lp-ts-card-img">
+							<img src="assets/img/obuv.png" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<section data-aos="fade-down" class="sixth-slide">
+				<div class="container-fluid">
+					<div class="sixth-slide-title">
+						<h1>ОТЗЫВЫ КЛИЕНТОВ</h1>
+					</div>
+					<div class="sixth-slide-subtitle">
+						<p>
+							Смотрите больше отзывов в нашем
+							<a href="https://www.instagram.com/bleach.moscow">Инстаграме</a>
+						</p>
+					</div>
+					<div class="sixth-slide-reviews d-flex">
+						<div class="sixth-slide-review-left">
+							<div class="sixth-slide-review-left-img first">
+								<img src="assets/img/IMG_8193.jpg" alt="" />
+							</div>
+							<div class="sixth-slide-review-left-img">
+								<img src="assets/img/IMG_8194.jpg" alt="" />
+							</div>
+							<div class="sixth-slide-review-left-img first">
+								<img src="assets/img/IMG_8195.jpg" alt="" />
+							</div>
+							<div class="sixth-slide-review-left-img">
+								<img src="assets/img/IMG_8196.jpg" alt="" />
+							</div>
+							<div class="sixth-slide-review-left-img first">
+								<img src="assets/img/IMG_8197.jpg" alt="" />
+							</div>
+						</div>
+						<div class="sixth-slide-review-right">
+							<div
+								id="carouselExampleFade"
+								class="carousel slide carousel-fade sixth-slide-review-right-carousel"
+								data-bs-ride="carousel"
+							>
+								<div class="carousel-inner">
+									<div class="carousel-item active" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8184.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8185.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8186.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8187.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8188.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8190.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8191.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8192.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+								</div>
+								<button
+									class="carousel-control-prev"
+									type="button"
+									data-bs-target="#carouselExampleFade"
+									data-bs-slide="prev"
+								>
+									<span
+										class="carousel-control-prev-icon"
+										aria-hidden="true"
+									></span>
+									<span class="visually-hidden">Previous</span>
+								</button>
+								<button
+									class="carousel-control-next"
+									type="button"
+									data-bs-target="#carouselExampleFade"
+									data-bs-slide="next"
+								>
+									<span
+										class="carousel-control-next-icon"
+										aria-hidden="true"
+									></span>
+									<span class="visually-hidden">Next</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section data-aos="fade-down" class="seventh-slide">
+				<div class="container-fluid">
+					<div
+						style="
+							width: 560px;
+							height: 310px;
+							overflow: hidden;
+							position: relative;
+						"
+					>
+						<iframe
+							style="
+								width: 100%;
+								height: 100%;
+								border: 1px solid #e6e6e6;
+								border-radius: 8px;
+								box-sizing: border-box;
+							"
+							src="https://yandex.ru/maps-reviews-widget/37606899767?comments"
+						></iframe
+						><a
+							href="https://yandex.ru/maps/org/bleach_moscow/37606899767/"
+							target="_blank"
+							style="
+								box-sizing: border-box;
+								text-decoration: none;
+								color: #b3b3b3;
+								font-size: 10px;
+								font-family: YS Text, sans-serif;
+								padding: 0 20px;
+								position: absolute;
+								bottom: 8px;
+								width: 100%;
+								text-align: center;
+								left: 0;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								display: block;
+								max-height: 14px;
+								white-space: nowrap;
+								padding: 0 16px;
+								box-sizing: border-box;
+							"
+							>Bleach Moscow на карте Москвы — Яндекс Карты</a
+						>
+					</div>
+				</div>
+			</section>
+			<section data-aos="fade-down" class="eighth-slide" id="contacts">
+				<div class="container-fluid d-flex">
+					<div class="eighth-slide-map">
+						<div style="position: relative; overflow: hidden">
+							<a
+								href="https://yandex.ru/maps/org/bleach_moscow/37606899767/?utm_medium=mapframe&utm_source=maps"
+								style="
+									color: #eee;
+									font-size: 12px;
+									position: absolute;
+									top: 0px;
+								"
+								>Bleach Moscow</a
+							><a
+								href="https://yandex.ru/maps/213/moscow/category/shoes_repair/184108229/?utm_medium=mapframe&utm_source=maps"
+								style="
+									color: #eee;
+									font-size: 12px;
+									position: absolute;
+									top: 14px;
+								"
+								>Ремонт обуви в Москве</a
+							><a
+								href="https://yandex.ru/maps/213/moscow/category/repair_of_bags_and_suitcases/75811549599/?utm_medium=mapframe&utm_source=maps"
+								style="
+									color: #eee;
+									font-size: 12px;
+									position: absolute;
+									top: 28px;
+								"
+								>Ремонт сумок и чемоданов в Москве</a
+							><iframe
+								src="https://yandex.ru/map-widget/v1/org/bleach_moscow/37606899767/?from=mapframe&indoorLevel=1&ll=37.600271%2C55.778953&z=17"
+								width="590"
+								height="800"
+								frameborder="1"
+								allowfullscreen="true"
+								style="position: relative"
+							></iframe>
+						</div>
+					</div>
+					<div class="eighth-slide-contacts">
+						<div class="eighth-slide-title">
+							<h2>КОНТАКТЫ</h2>
+						</div>
+						<div class="eighth-slide-text">
+							<p>Приемные пункты:</p>
+							<p>Весковский переулок 7 | 12:00 - 20:00</p>
+							<p>Малая Пироговская 13с1 | 10:00 - 21:00</p>
+							<p>Новорязанская улица 25с1 (Депо Три Вокзала) | 10:00 - 21:00</p>
+							<p>Телефон: <a href="tel:79254350101">+7 (925) 435-01-01</a></p>
+							<p>Свяжитесь с нами удобным способом для предварительной</p>
+							<p>оценки объема и стоимости работ</p>
+						</div>
+						<div class="eighth-slide-links d-flex">
+							<div class="eighth-slide-buttons">
+								<a
+									href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+									class="eighth-slide-button"
+									>Рассчитать стоимость</a
+								>
+								<a href="tel:79254350101" class="eighth-slide-button second"
+									>Позвонить</a
+								>
+							</div>
+							<div class="eighth-slide-stick"></div>
+							<div class="eighth-slide-icons">
+								<div class="eighth-slide-icon">
+									<a href="https://t.me/bleach_moscow"
+										><i class="fa-brands fa-telegram"></i
+									></a>
+								</div>
+								<div class="eighth-slide-icon">
+									<a
+										href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+										><i class="fa-brands fa-whatsapp"></i
+									></a>
+								</div>
+								<div class="eighth-slide-icon">
+									<a href="https://www.instagram.com/bleach.moscow/"
+										><i class="fa-brands fa-instagram"></i
+									></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer">
+				<div class="container-fluid">
+					<div class="footer-logo">
+						<img src="assets/img/bleach_logo.png" alt="" />
+					</div>
+					<div class="footer-text">
+						<p>© BLEACH MOSCOW 2018</p>
+						<p>Все права защищены</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init()
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+		<!-- Подключение Bootstrap 5 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<!-- Шрифты -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- AOS анимации -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+		<!-- Основной css-файл -->
+		<link rel="stylesheet" href="assets/css/styles.css" />
+
+		<title>BleachMoscow</title>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<div class="container-fluid">
+					<div class="header-line d-flex">
+						<div class="header-logo">
+							<a href="index.html"
+								><img src="assets/img/noroot.png" alt=""
+							/></a>
+						</div>
+						<div class="header-links d-flex">
+							<div class="header-link">
+								<a href="uslugi.html"></a>
+								<div class="dropdown header-dropdown">
+									<button
+										class="btn dropdown-toggle"
+										type="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										<a href="">Услуги</a>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="polishing_shoes.html"
+												>Чистка обуви</a
+											>
+										</li>
+										<li>
+											<a class="dropdown-item" href="restoration.html"
+												>Реставрация обуви и курток</a
+											>
+										</li>
+										<li>
+											<a class="dropdown-item" href="loro_piana.html"
+												>Сервис Loro Piana</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="header-link">
+								<a href="gallery_of _works.html">Примеры работ</a>
+							</div>
+							<div class="header-link">
+								<a href="#work">Как мы работаем</a>
+							</div>
+							<div class="header-link">
+								<a href="#contacts">Контакты</a>
+							</div>
+						</div>
+						<div class="header-phone">
+							<a href="tel:79254350101">+7 (925) 435-01-01</a>
+						</div>
+						<div class="header-icons d-flex">
+							<div class="header-icon">
+								<a href="https://www.instagram.com/bleach.moscow"
+									><i class="fa-brands fa-instagram"></i
+								></a>
+							</div>
+							<div class="header-icon">
+								<a href="https://wa.me//79254350101"
+									><i class="fa-brands fa-whatsapp"></i
+								></a>
+							</div>
+							<div class="header-icon">
+								<a href="https://t.me/bleach_moscow"
+									><i class="fa-brands fa-telegram"></i
+								></a>
+							</div>
+						</div>
+						<a
+							href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+							class="header-button"
+							>Рассчитать стоимость</a
+						>
+					</div>
+				</div>
+			</div>
+			<div class="header-980px">
+				<div class="container-fluid d-flex">
+					<div class="header-980px-logo">
+						<h3>BLEACH MOSCOW</h3>
+					</div>
+					<div
+						class="burger-menu"
+						onclick="toggleMenu()"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseExample"
+						aria-expanded="false"
+						aria-controls="collapseExample"
+					>
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</div>
+			</div>
+			<div class="header-640px">
+				<div class="container-fluid d-flex">
+					<div class="header-640px-logo">
+						<a href="index.html"
+							><img src="assets/img/Mask_group_97.png" alt=""
+						/></a>
+					</div>
+					<div class="burger-menu2" onclick="toggleMenu2(), toggleBlock()">
+						<div class="bar2"></div>
+						<div class="bar2"></div>
+						<div class="bar2"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="collapse mobile-menu" id="collapseExample">
+			<div class="card card-body" style="color: #000">
+				<div class="header-line d-flex">
+					<div class="header-logo">
+						<a href="index.html"><img src="assets/img/noroot.png" alt="" /></a>
+					</div>
+					<div class="header-links d-flex">
+						<div class="header-link">
+							<a href="uslugi.html">Услуги</a>
+						</div>
+						<div class="header-link">
+							<a href="loro_piana.html">Сервис Loro Piana</a>
+						</div>
+						<div class="header-link">
+							<a href="gallery_of _works.html">Примеры работ</a>
+						</div>
+						<div class="header-link">
+							<a href="#work">Как мы работаем</a>
+						</div>
+						<div class="header-link">
+							<a href="#contacts">Контакты</a>
+						</div>
+					</div>
+					<div class="header-phone">
+						<a href="tel:79254350101">+7 (925) 435-01-01</a>
+					</div>
+					<div class="header-icons d-flex">
+						<div class="header-icon">
+							<a href="https://www.instagram.com/bleach.moscow"
+								><i class="fa-brands fa-instagram"></i
+							></a>
+						</div>
+						<div class="header-icon">
+							<a href="https://wa.me//79254350101"
+								><i class="fa-brands fa-whatsapp"></i
+							></a>
+						</div>
+						<div class="header-icon">
+							<a href="https://t.me/bleach_moscow"
+								><i class="fa-brands fa-telegram"></i
+							></a>
+						</div>
+					</div>
+					<a
+						href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+						class="header-button"
+						>Рассчитать стоимость</a
+					>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu2" id="myBlock">
+			<div class="header-line d-flex">
+				<div class="header-links d-flex">
+					<div class="header-link">
+						<a href="uslugi.html">Услуги</a>
+					</div>
+					<div class="header-link">
+						<a href="loro_piana.html">Сервис Loro Piana</a>
+					</div>
+					<div class="header-link">
+						<a href="gallery_of _works.html">Примеры работ</a>
+					</div>
+					<div class="header-link">
+						<a href="#work">Как мы работаем</a>
+					</div>
+					<div class="header-link">
+						<a href="#contacts">Контакты</a>
+					</div>
+				</div>
+				<div class="header-phone">
+					<a href="tel:79254350101">+7 (925) 435-01-01</a>
+				</div>
+				<div class="header-icons d-flex">
+					<div class="header-icon">
+						<a href="tel:79254350101"
+							><i class="fa-solid fa-phone-volume"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://www.instagram.com/bleach.moscow"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://wa.me//79254350101"
+							><i class="fa-brands fa-whatsapp"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://t.me/bleach_moscow"
+							><i class="fa-brands fa-telegram"></i
+						></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main>
+			<section
+				class="first-slide"
+				style="background-image: url('assets/img/5_1.jpg')"
+			>
+				<div class="container-fluid">
+					<div class="fs-title">
+						<h2><span>ПРЕМИАЛЬНЫЙ СЕРВИС</span> ПО ВОССТАНОВЛЕНИЮ ВАШЕЙ</h2>
+						<h2>ОБУВИ, СУМОК И ЛЮБЫХ ИЗДЕЛИЙ ИЗ КОЖИ И ЗАМШИ</h2>
+					</div>
+					<div class="fs-subtitle">
+						<p>Отправьте фотографию и получите детальную</p>
+						<p>оценку вашей обуви и изделий за <span>15 минут</span></p>
+					</div>
+					<div class="fs-line d-flex">
+						<div class="fs-line_first">
+							<div class="fs-line-icon">
+								<a href="https://www.instagram.com/bleach.moscow"
+									><i class="fa-brands fa-instagram"></i
+								></a>
+							</div>
+							<div class="fs-line-icon">
+								<a href="https://t.me/bleach_moscow"
+									><i class="fa-brands fa-telegram"></i
+								></a>
+							</div>
+							<div class="fs-line_line"></div>
+							<div class="fs-line-text">
+								<p>мы в соцсетях</p>
+							</div>
+						</div>
+						<div class="fs-line_second">
+							<a
+								href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+								class="fs-line_second_button"
+								><p>Рассчитать стоимость</p></a
+							>
+						</div>
+						<div class="fs-line_third">
+							<img src="assets/img/Linked_Path_Group.png" alt="" />
+							<div class="fs-line_third-text">
+								<p>Отправьте фотографию</p>
+								<p>и получите детальную</p>
+								<p>оценку вашей обуви и</p>
+								<p>изделий за 15 минут</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section data-aos="fade-down" class="second-slide">
+				<div class="container-fluid">
+					<div class="second-slide-title">
+						<h1>НАШИ РАБОТЫ ДО/ПОСЛЕ</h1>
+					</div>
+					<div class="second-slide-carousel">
+						<div id="carouselExample" class="carousel slide">
+							<div class="carousel-inner">
+								<div class="carousel-item active" data-bs-interval="2000">
+									<img
+										src="assets/img/382280740_2001970933.jpg"
+										class="d-block w-100"
+										alt="..."
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img
+										src="assets/img/343394676_7025584349.jpg"
+										class="d-block w-100"
+										alt="..."
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img
+										src="assets/img/370891190_1744750189.jpg"
+										class="d-block w-100"
+										alt="..."
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img
+										src="assets/img/274342370_6624108282.jpg"
+										class="d-block w-100"
+										alt="..."
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img
+										src="assets/img/356216865_2308386364.jpg"
+										class="d-block w-100"
+										alt="..."
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img
+										src="assets/img/379291909_3346403122.jpg"
+										class="d-block w-100"
+										alt="..."
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img
+										src="assets/img/352438631_3509575565.jpg"
+										class="d-block w-100"
+										alt="..."
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img
+										src="assets/img/312626172_1611428398.jpg"
+										class="d-block w-100"
+										alt="..."
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img
+										src="assets/img/360041822_1840931479.jpg"
+										class="d-block w-100"
+										alt="..."
+									/>
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img
+										src="assets/img/347078923_3447511635.jpg"
+										class="d-block w-100"
+										alt="..."
+									/>
+								</div>
+							</div>
+							<button
+								class="carousel-control-prev"
+								type="button"
+								data-bs-target="#carouselExample"
+								data-bs-slide="prev"
+							>
+								<span
+									class="carousel-control-prev-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button
+								class="carousel-control-next"
+								type="button"
+								data-bs-target="#carouselExample"
+								data-bs-slide="next"
+							>
+								<span
+									class="carousel-control-next-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
+					<div class="second-slide-text">
+						<p>Чтобы увидеть больше работ,</p>
+						<p>переходите в нашу галерею</p>
+					</div>
+					<a href="gallery_of _works.html" class="second-slide-button"
+						>посмотреть</a
+					>
+				</div>
+			</section>
+			<section data-aos="fade-down" class="third-slide">
+				<div class="container-fluid">
+					<div class="ts-title">
+						<h1>Почему мы?</h1>
+					</div>
+					<div class="ts-cards-top row row-cols-2">
+						<div
+							class="ts-card col-6"
+							style="background-image: url('assets/img/Component_16_5.png')"
+						>
+							<div class="ts-card-title">
+								<h3>Нам более 5 лет</h3>
+							</div>
+							<div class="ts-card-text">
+								<p>Тысячи довольных клиентов</p>
+								<p>воспользовались нашим сервисом и</p>
+								<p>десятки тысяч пар обуви, сумок и изделий</p>
+								<p>прошли через наши руки.</p>
+							</div>
+						</div>
+						<div
+							class="ts-card second col-6"
+							style="background-image: url('assets/img/Component_10_7.png')"
+						>
+							<div class="ts-card-title">
+								<h3>Делаем предварительную оценку</h3>
+								<h3>удаленно</h3>
+							</div>
+							<div class="ts-card-text">
+								<p>Оцениваем стоимость</p>
+								<p>О работ по фото, которые</p>
+								<p>вы присылаете нам и</p>
+								<p>даём гарантию</p>
+								<p>результата</p>
+							</div>
+							<div class="ts-image">
+								<img class="first-image" src="assets/img/otziv.png" alt="" />
+								<img
+									class="second-image"
+									src="assets/img/photo_2024-02-18_21-44-33.jpg"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div class="w-100">
+							<a
+								href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+								class="ts-card-button"
+								><p>Рассчитать стоимость</p></a
+							>
+						</div>
+
+						<div
+							class="ts-card third col-6"
+							style="background-image: url('assets/img/Component_18_5.png')"
+						>
+							<div class="ts-card-title">
+								<h3>Наша миссия</h3>
+							</div>
+							<div class="ts-card-text bottom">
+								<p>— Донести в массы тот факт, что вашей обуви,</p>
+								<p>сумкам и другим изделиям из кожи можно</p>
+								<p>подарить вторую жизнь или продлить срок</p>
+								<p>службы. Благодаря бережному уходу и услугам</p>
+								<p>по реставрации ваши любимые вещи пробудут с</p>
+								<p>вами гораздо дольше!</p>
+							</div>
+						</div>
+						<div
+							class="ts-card fourth col-6"
+							style="background-image: url('assets/img/Component_26_2.png')"
+						>
+							<div class="ts-card-title">
+								<h3>Бесплатная доставка</h3>
+								<h3>в пределах МКАД</h3>
+							</div>
+							<div class="ts-card-text">
+								<p>Наш курьер заберет ваши изделия</p>
+								<p>и доставит готовый заказ в удобное время</p>
+							</div>
+						</div>
+						<div class="w-100">
+							<a
+								href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+								class="ts-card-button-1134px"
+								><p>Рассчитать стоимость</p></a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section data-aos="fade-down" class="fourth-slide">
+				<div class="container-fluid">
+					<div class="fourth-slide-title">
+						<h1>НАШИ УСЛУГИ</h1>
+					</div>
+					<div class="fourth-slide-cards row">
+						<div
+							class="col-4 fourth-slide-card"
+							style="background-image: url(assets/img/Rectangle_4_8.png)"
+						>
+							<div class="fourth-slide-card-title">
+								<h4>Чистка обуви</h4>
+							</div>
+							<div class="fourth-slide-card-subtitle"></div>
+							<div class="fourth-slide-card-text">
+								<p>Базовый уход для классической обуви</p>
+								<p>Чистка обуви</p>
+								<p>Чистка UGG</p>
+							</div>
+							<div class="fourth-slide-card-price">
+								<p>ОТ 3500 руб.</p>
+							</div>
+							<a href="uslugi.html" class="fourth-slide-card-button">
+								<p>Подробнее</p>
+							</a>
+						</div>
+						<div
+							class="col-4 fourth-slide-card second"
+							style="background-image: url(assets/img/Rectangle_4_9.png)"
+						>
+							<div class="fourth-slide-card-title">
+								<h4>Ремонт обуви</h4>
+							</div>
+							<div class="fourth-slide-card-subtitle"></div>
+							<div class="fourth-slide-card-text">
+								<p>Профилактика для обуви</p>
+								<p>Набойки для обуви</p>
+								<p>Ремонт задников</p>
+							</div>
+							<div class="fourth-slide-card-price">
+								<p>ОТ 1000 руб.</p>
+							</div>
+							<a href="uslugi.html" class="fourth-slide-card-button">
+								<p>Подробнее</p>
+							</a>
+						</div>
+						<div
+							class="col-4 fourth-slide-card third"
+							style="background-image: url(assets/img/Rectangle_4_10.png)"
+						>
+							<div class="fourth-slide-card-title">
+								<h4>Реставрация обуви</h4>
+							</div>
+							<div class="fourth-slide-card-subtitle"></div>
+							<div class="fourth-slide-card-text">
+								<p>Чистка, покраска и реставрация обуви</p>
+								<p>Реставрация каблуков</p>
+							</div>
+							<div class="fourth-slide-card-price">
+								<p>ОТ 6500 руб.</p>
+							</div>
+							<a href="uslugi.html" class="fourth-slide-card-button">
+								<p>Подробнее</p>
+							</a>
+						</div>
+						<div
+							class="col-4 fourth-slide-card fourth"
+							style="background-image: url(assets/img/Rectangle_4_11.png)"
+						>
+							<div class="fourth-slide-card-title">
+								<h4>Чистка и реставрация</h4>
+								<h4>сумок</h4>
+							</div>
+							<div class="fourth-slide-card-subtitle"></div>
+							<div class="fourth-slide-card-text">
+								<p>Покраска сумки с подбором цвета</p>
+								<p>Реставрация углов сумки</p>
+								<p>Чистка сумки</p>
+								<p>Заливка уреза</p>
+							</div>
+							<div class="fourth-slide-card-price">
+								<p>ОТ 3000 руб.</p>
+							</div>
+							<a href="uslugi.html" class="fourth-slide-card-button">
+								<p>Подробнее</p>
+							</a>
+						</div>
+						<div
+							class="col-4 fourth-slide-card fifth"
+							style="background-image: url(assets/img/Rectangle_4_12.png)"
+						>
+							<div class="fourth-slide-card-title">
+								<h4>Чистка и реставрация</h4>
+								<h4>курток</h4>
+							</div>
+							<div class="fourth-slide-card-subtitle"></div>
+							<div class="fourth-slide-card-text">
+								<p></p>
+								<p></p>
+							</div>
+							<div class="fourth-slide-card-price">
+								<p>ОТ 10000 руб.</p>
+							</div>
+							<a href="uslugi.html" class="fourth-slide-card-button">
+								<p>Подробнее</p>
+							</a>
+						</div>
+						<div
+							class="col-4 fourth-slide-card sixth"
+							style="background-image: url(assets/img/Rectangle_4_15.png)"
+						>
+							<div class="fourth-slide-card-title">
+								<h4>Замена подошвы</h4>
+								<h4>Loro Piana</h4>
+							</div>
+							<div class="fourth-slide-card-subtitle"></div>
+							<div class="fourth-slide-card-text">
+								<p></p>
+								<p></p>
+							</div>
+							<div class="fourth-slide-card-price">
+								<p>12000 руб.</p>
+							</div>
+							<a href="loro_piana.html" class="fourth-slide-card-button">
+								<p>Подробнее</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section data-aos="fade-down" class="fifth-slide" id="work">
+				<div class="container-fluid">
+					<div class="fifth-slide-title">
+						<h1>Как воспользоваться</h1>
+						<h1>нашими услугами?</h1>
+					</div>
+					<div class="fifth-slide-subtitle">
+						<p>Мы разработали уникальный и удобный сервис для наших</p>
+						<p>клиентов: доставка курьером по всей Москве в пределах МКАД!</p>
+					</div>
+					<div class="fifth-slide-card d-flex">
+						<div class="fifth-slide-card-img">
+							<img src="assets/img/1.png" alt="" />
+						</div>
+						<div class="fifth-slide-card-text">
+							<div class="fifth-slide-card-title">
+								<h3>Оцениваем заказ</h3>
+							</div>
+							<div class="fifth-slide-card-subtitle">
+								<p>Мы не берёмся за работу вслепую. Нам крайне важно</p>
+								<p>дать нашим клиентам высокое качество и экспертизу.</p>
+								<p>Поэтому, пред тем, как назначить курьера, наши</p>
+								<p>специалисты оценивают сложность работ по фото,</p>
+								<p>которые вы присылаете нам в соцсетях и дают</p>
+								<p>комментарий по объёму работ и ожидаемому результату.</p>
+							</div>
+						</div>
+					</div>
+					<div class="fifth-slide-angle">
+						<img src="assets/img/Mask_group_8.png" alt="" />
+					</div>
+					<div class="fifth-slide-card d-flex">
+						<div class="fifth-slide-card-img">
+							<img src="assets/img/2.png" alt="" />
+						</div>
+						<div class="fifth-slide-card-text">
+							<div class="fifth-slide-card-title">
+								<h3>Назначаем курьера</h3>
+							</div>
+							<div class="fifth-slide-card-subtitle">
+								<p>После оценки работ, наша команда назначает</p>
+								<p>курьера, который приедет на ваш адрес и заберёт</p>
+								<p>обувь и изделия в нашу мастерскую. Также, вы</p>
+								<p>можете привезти её к нам самостоятельно в один из</p>
+								<p>приемных пунктов</p>
+							</div>
+						</div>
+					</div>
+					<div class="fifth-slide-angle">
+						<img src="assets/img/Mask_group_8.png" alt="" />
+					</div>
+					<div class="fifth-slide-card d-flex">
+						<div class="fifth-slide-card-img">
+							<img src="assets/img/3.png" alt="" />
+						</div>
+						<div class="fifth-slide-card-text">
+							<div class="fifth-slide-card-title">
+								<h3>Выполняем работу</h3>
+							</div>
+							<div class="fifth-slide-card-subtitle">
+								<p>Работаем с вашими изделиями: чистим, красим,</p>
+								<p>ремонтируем и отправляем с курьером обратно. Вы</p>
+								<p>также можете забрать заказ самостоятельно</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section data-aos="fade-down" class="sixth-slide">
+				<div class="container-fluid">
+					<div class="sixth-slide-title">
+						<h1>ОТЗЫВЫ КЛИЕНТОВ</h1>
+					</div>
+					<div class="sixth-slide-subtitle">
+						<p>
+							Смотрите больше отзывов в нашем
+							<a href="https://www.instagram.com/bleach.moscow">Инстаграме</a>
+						</p>
+					</div>
+					<div class="sixth-slide-reviews d-flex">
+						<div class="sixth-slide-review-left">
+							<div class="sixth-slide-review-left-img first">
+								<img src="assets/img/IMG_8193.jpg" alt="" />
+							</div>
+							<div class="sixth-slide-review-left-img">
+								<img src="assets/img/IMG_8194.jpg" alt="" />
+							</div>
+							<div class="sixth-slide-review-left-img first">
+								<img src="assets/img/IMG_8195.jpg" alt="" />
+							</div>
+							<div class="sixth-slide-review-left-img">
+								<img src="assets/img/IMG_8196.jpg" alt="" />
+							</div>
+							<div class="sixth-slide-review-left-img first">
+								<img src="assets/img/IMG_8197.jpg" alt="" />
+							</div>
+						</div>
+						<div class="sixth-slide-review-right">
+							<div
+								id="carouselExampleFade"
+								class="carousel slide carousel-fade sixth-slide-review-right-carousel"
+								data-bs-ride="carousel"
+							>
+								<div class="carousel-inner">
+									<div class="carousel-item active" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8184.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8185.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8186.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8187.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8188.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8190.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8191.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+									<div class="carousel-item" data-bs-interval="2000">
+										<img
+											src="assets/img/IMG_8192.jpg"
+											class="d-block w-100"
+											alt="..."
+										/>
+									</div>
+								</div>
+								<button
+									class="carousel-control-prev"
+									type="button"
+									data-bs-target="#carouselExampleFade"
+									data-bs-slide="prev"
+								>
+									<span
+										class="carousel-control-prev-icon"
+										aria-hidden="true"
+									></span>
+									<span class="visually-hidden">Previous</span>
+								</button>
+								<button
+									class="carousel-control-next"
+									type="button"
+									data-bs-target="#carouselExampleFade"
+									data-bs-slide="next"
+								>
+									<span
+										class="carousel-control-next-icon"
+										aria-hidden="true"
+									></span>
+									<span class="visually-hidden">Next</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section data-aos="fade-down" class="seventh-slide">
+				<div class="container-fluid">
+					<div
+						style="
+							width: 560px;
+							height: 310px;
+							overflow: hidden;
+							position: relative;
+						"
+					>
+						<iframe
+							style="
+								width: 100%;
+								height: 100%;
+								border: 1px solid #e6e6e6;
+								border-radius: 8px;
+								box-sizing: border-box;
+							"
+							src="https://yandex.ru/maps-reviews-widget/37606899767?comments"
+						></iframe
+						><a
+							href="https://yandex.ru/maps/org/bleach_moscow/37606899767/"
+							target="_blank"
+							style="
+								box-sizing: border-box;
+								text-decoration: none;
+								color: #b3b3b3;
+								font-size: 10px;
+								font-family: YS Text, sans-serif;
+								padding: 0 20px;
+								position: absolute;
+								bottom: 8px;
+								width: 100%;
+								text-align: center;
+								left: 0;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								display: block;
+								max-height: 14px;
+								white-space: nowrap;
+								padding: 0 16px;
+								box-sizing: border-box;
+							"
+							>Bleach Moscow на карте Москвы — Яндекс Карты</a
+						>
+					</div>
+				</div>
+			</section>
+			<section data-aos="fade-down" class="eighth-slide" id="contacts">
+				<div class="container-fluid d-flex">
+					<div class="eighth-slide-map">
+						<div style="position: relative; overflow: hidden">
+							<a
+								href="https://yandex.ru/maps/org/bleach_moscow/37606899767/?utm_medium=mapframe&utm_source=maps"
+								style="
+									color: #eee;
+									font-size: 12px;
+									position: absolute;
+									top: 0px;
+								"
+								>Bleach Moscow</a
+							><a
+								href="https://yandex.ru/maps/213/moscow/category/shoes_repair/184108229/?utm_medium=mapframe&utm_source=maps"
+								style="
+									color: #eee;
+									font-size: 12px;
+									position: absolute;
+									top: 14px;
+								"
+								>Ремонт обуви в Москве</a
+							><a
+								href="https://yandex.ru/maps/213/moscow/category/repair_of_bags_and_suitcases/75811549599/?utm_medium=mapframe&utm_source=maps"
+								style="
+									color: #eee;
+									font-size: 12px;
+									position: absolute;
+									top: 28px;
+								"
+								>Ремонт сумок и чемоданов в Москве</a
+							><iframe
+								src="https://yandex.ru/map-widget/v1/org/bleach_moscow/37606899767/?from=mapframe&indoorLevel=1&ll=37.600271%2C55.778953&z=17"
+								width="590"
+								height="800"
+								frameborder="1"
+								allowfullscreen="true"
+								style="position: relative"
+							></iframe>
+						</div>
+					</div>
+					<div class="eighth-slide-contacts">
+						<div class="eighth-slide-title">
+							<h2>КОНТАКТЫ</h2>
+						</div>
+						<div class="eighth-slide-text">
+							<p>Приемные пункты:</p>
+							<p>Весковский переулок 7 | 12:00 - 20:00</p>
+							<p>Малая Пироговская 13с1 | 10:00 - 21:00</p>
+							<p>Новорязанская улица 25с1 (Депо Три Вокзала) | 10:00 - 21:00</p>
+							<p>Телефон: <a href="tel:79254350101">+7 (925) 435-01-01</a></p>
+							<p>Свяжитесь с нами удобным способом для предварительной</p>
+							<p>оценки объема и стоимости работ</p>
+						</div>
+						<div class="eighth-slide-links d-flex">
+							<div class="eighth-slide-buttons">
+								<a
+									href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+									class="eighth-slide-button"
+									>Рассчитать стоимость</a
+								>
+								<a href="tel:79254350101" class="eighth-slide-button second"
+									>Позвонить</a
+								>
+							</div>
+							<div class="eighth-slide-stick"></div>
+							<div class="eighth-slide-icons">
+								<div class="eighth-slide-icon">
+									<a href="https://t.me/bleach_moscow"
+										><i class="fa-brands fa-telegram"></i
+									></a>
+								</div>
+								<div class="eighth-slide-icon">
+									<a
+										href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+										><i class="fa-brands fa-whatsapp"></i
+									></a>
+								</div>
+								<div class="eighth-slide-icon">
+									<a href="https://www.instagram.com/bleach.moscow/"
+										><i class="fa-brands fa-instagram"></i
+									></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer">
+				<div class="container-fluid">
+					<div class="footer-logo">
+						<img src="assets/img/bleach_logo.png" alt="" />
+					</div>
+					<div class="footer-text">
+						<p>© BLEACH MOSCOW 2018</p>
+						<p>Все права защищены</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init()
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
