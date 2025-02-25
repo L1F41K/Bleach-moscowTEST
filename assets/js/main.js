@@ -18,4 +18,11 @@ function toggleBlock() {
 		body.classList.remove('overflow-hidden')
 	}
 }
+document
+	.getElementById('dropdownButton')
+	.addEventListener('click', function (event) {
+		event.preventDefault() // Предотвращаем стандартное поведение
+		window.location.href = 'uslugi.html' // Переход на страницу
+	})
+
 lightGallery(document.getElementById('gallery-zoom-from-origin-demo'))
