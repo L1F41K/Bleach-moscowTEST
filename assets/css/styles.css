@@ -1485,7 +1485,29 @@ header {
 	display: flex;
 	justify-content: center;
 }
+/* Основные стили для контейнера слайдера */
+.swiper-container {
+	margin-top: 40px;
+	width: 100%;
+	height: 400px; /* Фиксированная высота */
+	overflow: hidden;
+}
 
+/* Стили для слайдов */
+.swiper-slide {
+	width: 20%; /* Каждый слайд занимает 20% ширины экрана */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f0f0f0; /* Фон слайда */
+}
+
+/* Стили для изображений */
+.swiper-slide img {
+	width: 100%; /* Изображение занимает всю ширину слайда */
+	height: 100%; /* Изображение занимает всю высоту слайда */
+	object-fit: cover; /* Растягиваем изображение, сохраняя пропорции */
+}
 /* Adaptive */
 @media screen and (max-width: 1440px) {
 	.header-link a,
