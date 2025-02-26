@@ -15,6 +15,11 @@
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 			crossorigin="anonymous"
 		/>
+		<!-- Подключение Swiper CSS -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
 		<!-- Шрифты -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -293,6 +298,31 @@
 						class="eighth-slide-button"
 						>Рассчитать стоимость</a
 					>
+					<h3 class="black mt-5">Примеры работ</h3>
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<!-- Слайды -->
+							<div class="swiper-slide">
+								<img src="assets/img/IMG_2447.JPG" alt="Image 1" />
+							</div>
+							<div class="swiper-slide">
+								<img src="assets/img/347078923_3447511635.jpg" alt="Image 2" />
+							</div>
+							<div class="swiper-slide">
+								<img src="assets/img/316495961_1039795058.jpg" alt="Image 3" />
+							</div>
+							<div class="swiper-slide">
+								<img src="assets/img/360041822_1840931479.jpg" alt="Image 4" />
+							</div>
+							<div class="swiper-slide">
+								<img src="assets/img/370891190_1744750189.jpg" alt="Image 5" />
+							</div>
+							<div class="swiper-slide">
+								<img src="assets/img/358504781_6624898786.jpg" alt="Image 6" />
+							</div>
+							<!-- Добавьте больше слайдов по необходимости -->
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- <section data-aos="fade-down" class="eighth-slide" id="contacts">
@@ -406,6 +436,34 @@
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 			crossorigin="anonymous"
 		></script>
+		<!-- Подключение Swiper JS -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const swiper = new Swiper('.swiper-container', {
+					loop: false, // Отключаем бесконечную прокрутку
+					slidesPerView: 'auto', // Автоматическое количество слайдов
+					spaceBetween: 10, // Расстояние между слайдами
+					grabCursor: true, // Курсор в виде "руки" при наведении
+					freeMode: true, // Свободное перетаскивание
+					breakpoints: {
+						// Настройки для разных размеров экрана
+						320: {
+							slidesPerView: 2, // На маленьких экранах показываем 2 слайда
+							spaceBetween: 5,
+						},
+						768: {
+							slidesPerView: 3, // На средних экранах показываем 3 слайда
+							spaceBetween: 10,
+						},
+						1024: {
+							slidesPerView: 5, // На больших экранах показываем 5 слайдов
+							spaceBetween: 15,
+						},
+					},
+				})
+			})
+		</script>
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
