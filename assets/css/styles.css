@@ -1368,7 +1368,9 @@ header {
 	max-width: 500px;
 }
 .restoration-subtitle {
-	max-width: 400px;
+	max-width: 800px;
+	margin-top: 15px;
+	margin-bottom: 10px;
 }
 /* Основные стили для слайдера */
 .custom-slider {
@@ -1388,14 +1390,14 @@ header {
 /* Стили для слайда */
 .custom-slide {
 	min-width: 100%; /* Каждый слайд занимает 100% ширины */
-	height: 100%;
+	height: 90%;
 	position: relative;
 }
 
 /* Стили для карточки */
 .custom-card {
 	position: relative;
-	height: 90%;
+	height: 100%;
 }
 
 .custom-card img {
@@ -1452,7 +1454,7 @@ header {
 	font-size: 2rem;
 	z-index: 10;
 	border-radius: 50%;
-	padding: 10px 20px;
+	padding: 5px 20px;
 	transition: all 0.3s;
 }
 .custom-slider-prev:hover,
@@ -1471,9 +1473,10 @@ header {
 .restoration-button {
 	display: flex;
 	justify-content: center;
-	margin-top: 20px;
 }
-
+.restoration-button button {
+	margin-top: 0;
+}
 /* Adaptive */
 @media screen and (max-width: 1440px) {
 	.header-link a,
