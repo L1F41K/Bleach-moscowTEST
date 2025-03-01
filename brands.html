@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+		<!-- Подключение Bootstrap 5 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<!-- Шрифты -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- AOS анимации -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+		<!-- Основной css-файл -->
+		<link rel="stylesheet" href="assets/css/styles.css" />
+
+		<title>Услуги Bleach Moscow</title>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<div class="container-fluid">
+					<div class="header-line d-flex">
+						<div class="header-logo">
+							<a href="index.html"
+								><img src="assets/img/noroot.png" alt=""
+							/></a>
+						</div>
+						<div class="header-links d-flex">
+							<div class="header-link">
+								<div class="dropdown header-dropdown">
+									<button
+										class="btn dropdown-toggle header-button-uslugi"
+										type="button"
+										aria-expanded="false"
+										id="dropdownButton"
+									>
+										Услуги
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownButton">
+										<li>
+											<a class="dropdown-item" href="polishing_shoes.html"
+												>Чистка обуви</a
+											>
+										</li>
+										<li>
+											<a class="dropdown-item" href="restoration.html"
+												>Реставрация обуви и курток</a
+											>
+										</li>
+										<li>
+											<a class="dropdown-item" href="rework_shoes.html"
+												>Ремонт обуви</a
+											>
+										</li>
+										<li>
+											<a class="dropdown-item" href="polishing_bags.html"
+												>Чистка и реставрация сумок</a
+											>
+										</li>
+										<li>
+											<a class="dropdown-item" href="loro_piana.html"
+												>Сервис Loro Piana</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="header-link">
+								<a href="gallery_of _works.html">Примеры работ</a>
+							</div>
+							<div class="header-link">
+								<a href="#work">Как мы работаем</a>
+							</div>
+							<div class="header-link">
+								<a href="#contacts">Контакты</a>
+							</div>
+						</div>
+						<div class="header-phone">
+							<a href="tel:79254350101">+7 (925) 435-01-01</a>
+						</div>
+						<div class="header-icons d-flex">
+							<div class="header-icon">
+								<a href="https://www.instagram.com/bleach.moscow"
+									><i class="fa-brands fa-instagram"></i
+								></a>
+							</div>
+							<div class="header-icon">
+								<a href="https://wa.me//79254350101"
+									><i class="fa-brands fa-whatsapp"></i
+								></a>
+							</div>
+							<div class="header-icon">
+								<a href="https://t.me/bleach_moscow"
+									><i class="fa-brands fa-telegram"></i
+								></a>
+							</div>
+						</div>
+						<a
+							href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+							class="header-button"
+							>Рассчитать стоимость</a
+						>
+					</div>
+				</div>
+			</div>
+			<div class="header-980px">
+				<div class="container-fluid d-flex">
+					<div class="header-980px-logo">
+						<h3>BLEACH MOSCOW</h3>
+					</div>
+					<div
+						class="burger-menu"
+						onclick="toggleMenu()"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseExample"
+						aria-expanded="false"
+						aria-controls="collapseExample"
+					>
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</div>
+			</div>
+			<div class="header-640px">
+				<div class="container-fluid d-flex">
+					<div class="header-640px-logo">
+						<a href="index.html"
+							><img src="assets/img/Mask_group_97.png" alt=""
+						/></a>
+					</div>
+					<div class="burger-menu2" onclick="toggleMenu2(), toggleBlock()">
+						<div class="bar2"></div>
+						<div class="bar2"></div>
+						<div class="bar2"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="collapse mobile-menu" id="collapseExample">
+			<div class="card card-body" style="color: #000">
+				<div class="header-line d-flex">
+					<div class="header-logo">
+						<a href="index.html"><img src="assets/img/noroot.png" alt="" /></a>
+					</div>
+					<div class="header-links d-flex">
+						<div class="header-link">
+							<a href="uslugi.html">Услуги</a>
+						</div>
+						<div class="header-link">
+							<a href="loro_piana.html">Сервис Loro Piana</a>
+						</div>
+						<div class="header-link">
+							<a href="gallery_of _works.html">Примеры работ</a>
+						</div>
+						<div class="header-link">
+							<a href="#work">Как мы работаем</a>
+						</div>
+						<div class="header-link">
+							<a href="#contacts">Контакты</a>
+						</div>
+					</div>
+					<div class="header-phone">
+						<a href="tel:79254350101">+7 (925) 435-01-01</a>
+					</div>
+					<div class="header-icons d-flex">
+						<div class="header-icon">
+							<a href="https://www.instagram.com/bleach.moscow"
+								><i class="fa-brands fa-instagram"></i
+							></a>
+						</div>
+						<div class="header-icon">
+							<a href="https://wa.me//79254350101"
+								><i class="fa-brands fa-whatsapp"></i
+							></a>
+						</div>
+						<div class="header-icon">
+							<a href="https://t.me/bleach_moscow"
+								><i class="fa-brands fa-telegram"></i
+							></a>
+						</div>
+					</div>
+					<a
+						href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+						class="header-button"
+						>Рассчитать стоимость</a
+					>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu2" id="myBlock">
+			<div class="header-line d-flex">
+				<div class="header-links d-flex">
+					<div class="header-link">
+						<a href="uslugi.html">Услуги</a>
+					</div>
+					<div class="header-link">
+						<a href="loro_piana.html">Сервис Loro Piana</a>
+					</div>
+					<div class="header-link">
+						<a href="gallery_of _works.html">Примеры работ</a>
+					</div>
+					<div class="header-link">
+						<a href="#work">Как мы работаем</a>
+					</div>
+					<div class="header-link">
+						<a href="#contacts">Контакты</a>
+					</div>
+				</div>
+				<div class="header-phone">
+					<a href="tel:79254350101">+7 (925) 435-01-01</a>
+				</div>
+				<div class="header-icons d-flex">
+					<div class="header-icon">
+						<a href="tel:79254350101"
+							><i class="fa-solid fa-phone-volume"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://www.instagram.com/bleach.moscow"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://wa.me//79254350101"
+							><i class="fa-brands fa-whatsapp"></i
+						></a>
+					</div>
+					<div class="header-icon">
+						<a href="https://t.me/bleach_moscow"
+							><i class="fa-brands fa-telegram"></i
+						></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main>
+			<section class="brands">
+				<!-- Навбар -->
+				<div class="navbar">
+					<!-- Поле поиска -->
+					<form class="search-form">
+						<input type="search" placeholder="Поиск" class="search-input" />
+						<button type="submit" class="search-button">Найти</button>
+					</form>
+
+					<!-- Кнопка фильтрации -->
+					<div class="filter-dropdown">
+						<button class="filter-button">Фильтры</button>
+						<div class="dropdown-content">
+							<!-- Колонка "Тип изделия" -->
+							<div class="filter-column">
+								<h6>Тип изделия</h6>
+								<label class="filter-item">
+									<input type="checkbox" id="typeShoes" />
+									Обувь
+								</label>
+								<label class="filter-item">
+									<input type="checkbox" id="typeBags" />
+									Сумки
+								</label>
+								<label class="filter-item">
+									<input type="checkbox" id="typeJackets" />
+									Куртки
+								</label>
+							</div>
+
+							<!-- Колонка "Бренд" -->
+							<div class="filter-column">
+								<h6>Бренд</h6>
+								<label class="filter-item">
+									<input type="checkbox" id="brandNike" />
+									Nike
+								</label>
+								<label class="filter-item">
+									<input type="checkbox" id="brandAdidas" />
+									Adidas
+								</label>
+								<label class="filter-item">
+									<input type="checkbox" id="brandGucci" />
+									Gucci
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="brands-cards">
+					<a href="#" class="brands-card">
+						<img
+							class="brands-img"
+							src="assets/img/274342370_6624108282.jpg"
+							alt="Изображение товара"
+						/>
+						<div class="brands-title">
+							<h3>Чистка обуви</h3>
+							<h3>UGG</h3>
+						</div>
+
+						<p class="brands-price">4000 руб.</p>
+					</a>
+					<!-- Добавьте ещё 4 карточки -->
+					<a href="#" class="brands-card">
+						<img
+							class="brands-img"
+							src="assets/img/352438631_3509575565.jpg"
+							alt="Изображение товара"
+						/>
+						<div class="brands-title">
+							<h3>Ремонт сумки</h3>
+							<h3>CHANEL</h3>
+						</div>
+						<p class="brands-price">7000 руб.</p>
+					</a>
+					<a href="#" class="brands-card">
+						<img
+							class="brands-img"
+							src="assets/img/274342370_6624108282.jpg"
+							alt="Изображение товара"
+						/>
+						<div class="brands-title">
+							<h3>Тип изделия</h3>
+							<h3>Бренд</h3>
+						</div>
+						<p class="brands-price">1000 руб.</p>
+					</a>
+					<a href="#" class="brands-card">
+						<img
+							class="brands-img"
+							src="assets/img/274342370_6624108282.jpg"
+							alt="Изображение товара"
+						/>
+						<div class="brands-title">
+							<h3>Тип изделия</h3>
+							<h3>Бренд</h3>
+						</div>
+						<p class="brands-price">1000 руб.</p>
+					</a>
+					<a href="#" class="brands-card">
+						<img
+							class="brands-img"
+							src="assets/img/274342370_6624108282.jpg"
+							alt="Изображение товара"
+						/>
+						<div class="brands-title">
+							<h3>Тип изделия</h3>
+							<h3>Бренд</h3>
+						</div>
+						<p class="brands-price">1000 руб.</p>
+					</a>
+					<a href="#" class="brands-card">
+						<img
+							class="brands-img"
+							src="assets/img/274342370_6624108282.jpg"
+							alt="Изображение товара"
+						/>
+						<div class="brands-title">
+							<h3>Тип изделия</h3>
+							<h3>Бренд</h3>
+						</div>
+						<p class="brands-price">1000 руб.</p>
+					</a>
+				</div>
+			</section>
+			<!-- <section data-aos="fade-down" class="eighth-slide" id="contacts">
+				<div class="container-fluid d-flex">
+					<div class="eighth-slide-map">
+						<div style="position: relative; overflow: hidden">
+							<a
+								href="https://yandex.ru/maps/org/bleach_moscow/37606899767/?utm_medium=mapframe&utm_source=maps"
+								style="
+									color: #eee;
+									font-size: 12px;
+									position: absolute;
+									top: 0px;
+								"
+								>Bleach Moscow</a
+							><a
+								href="https://yandex.ru/maps/213/moscow/category/shoes_repair/184108229/?utm_medium=mapframe&utm_source=maps"
+								style="
+									color: #eee;
+									font-size: 12px;
+									position: absolute;
+									top: 14px;
+								"
+								>Ремонт обуви в Москве</a
+							><a
+								href="https://yandex.ru/maps/213/moscow/category/repair_of_bags_and_suitcases/75811549599/?utm_medium=mapframe&utm_source=maps"
+								style="
+									color: #eee;
+									font-size: 12px;
+									position: absolute;
+									top: 28px;
+								"
+								>Ремонт сумок и чемоданов в Москве</a
+							><iframe
+								src="https://yandex.ru/map-widget/v1/org/bleach_moscow/37606899767/?from=mapframe&indoorLevel=1&ll=37.600271%2C55.778953&z=17"
+								width="590"
+								height="800"
+								frameborder="1"
+								allowfullscreen="true"
+								style="position: relative"
+							></iframe>
+						</div>
+					</div>
+					<div class="eighth-slide-contacts">
+						<div class="eighth-slide-title">
+							<h2>КОНТАКТЫ</h2>
+						</div>
+						<div class="eighth-slide-text">
+							<p>Приемные пункты:</p>
+							<p>Весковский переулок 7 | 12:00 - 20:00</p>
+							<p>Малая Пироговская 13с1 | 10:00 - 21:00</p>
+							<p>Новорязанская улица 25с1 (Депо Три Вокзала) | 10:00 - 21:00</p>
+							<p>Телефон: <a href="tel:79254350101">+7 (925) 435-01-01</a></p>
+							<p>Свяжитесь с нами удобным способом для предварительной</p>
+							<p>оценки объема и стоимости работ</p>
+						</div>
+						<div class="eighth-slide-links d-flex">
+							<div class="eighth-slide-buttons">
+								<a
+									href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+									class="eighth-slide-button"
+									>Рассчитать стоимость</a
+								>
+								<a href="tel:79254350101" class="eighth-slide-button second"
+									>Позвонить</a
+								>
+							</div>
+							<div class="eighth-slide-stick"></div>
+							<div class="eighth-slide-icons">
+								<div class="eighth-slide-icon">
+									<a href="https://t.me/bleach_moscow"
+										><i class="fa-brands fa-telegram"></i
+									></a>
+								</div>
+								<div class="eighth-slide-icon">
+									<a
+										href="https://api.whatsapp.com/send/?phone=79254350101&text&type=phone_number&app_absent=0"
+										><i class="fa-brands fa-whatsapp"></i
+									></a>
+								</div>
+								<div class="eighth-slide-icon">
+									<a href="https://www.instagram.com/bleach.moscow/"
+										><i class="fa-brands fa-instagram"></i
+									></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
+		</main>
+		<footer>
+			<div class="footer">
+				<div class="container-fluid">
+					<div class="footer-logo">
+						<img src="assets/img/bleach_logo.png" alt="" />
+					</div>
+					<div class="footer-text">
+						<p>© BLEACH MOSCOW 2018</p>
+						<p>Все права защищены</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init()
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/brands.js"></script>
+	</body>
+</html>
