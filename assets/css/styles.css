@@ -1669,6 +1669,12 @@ header {
 	margin: 0;
 	margin-top: 15px;
 }
+.brands-caption p {
+	color: #686868;
+	font-size: 12px;
+	margin-top: 10px;
+	text-align: center;
+}
 /* Adaptive */
 @media screen and (max-width: 1440px) {
 	.header-link a,
