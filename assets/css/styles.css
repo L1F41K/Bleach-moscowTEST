@@ -1670,6 +1670,19 @@ header {
 	margin-top: 10px;
 	text-align: center;
 }
+.brand-solo-text {
+	max-width: 600px;
+}
+.brand-solo-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.brand-solo-img img {
+	max-width: 600px;
+	object-fit: cover;
+}
 
 .line {
 	display: flex;
