@@ -1351,7 +1351,6 @@ header {
 }
 .solo-text {
 	max-width: 500px;
-	margin-left: 15px;
 }
 .price-list {
 	border: 1px solid #5a5959;
@@ -1363,9 +1362,6 @@ header {
 	font-family: 'Playfair Display';
 	font-weight: 600;
 	text-align: center;
-}
-.solo-img img {
-	max-width: 500px;
 }
 .uslugi-section {
 	margin-top: 40px;
@@ -1459,7 +1455,6 @@ header {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	background-color: rgba(0, 0, 0, 0.3);
 	color: #fff;
 	border: none;
 	cursor: pointer;
@@ -1675,6 +1670,51 @@ header {
 	margin-top: 10px;
 	text-align: center;
 }
+
+.line {
+	display: flex;
+	gap: 20px;
+	max-width: 900px;
+	margin: 20px auto;
+	height: 100%; /* Ensure full height for flex layout */
+}
+
+.left {
+	flex: 0 1 calc(50% - 10px);
+	max-width: calc(50% - 10px);
+}
+
+.pic-holder {
+	width: 100%;
+	height: 100%; /* Ensure the container takes up the full height */
+}
+
+.pic {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Ensure image covers the space */
+}
+.pic img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+.right {
+	flex: 0 1 calc(50% - 10px);
+	max-width: calc(50% - 10px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%; /* Full height for right container */
+}
+
+.solo-button {
+	margin-top: 40px; /* Кнопка прижата к низу */
+	width: auto;
+	align-self: flex-start;
+}
+
 /* Adaptive */
 @media screen and (max-width: 1440px) {
 	.header-link a,
@@ -1993,6 +2033,14 @@ header {
 	.contacts-icons i {
 		font-size: 40px;
 	}
+	.services .line {
+		flex-direction: column;
+		align-items: center;
+	}
+	.solo-button {
+		margin: 40px auto;
+		margin-bottom: 0;
+	}
 }
 @media screen and (max-width: 725px) {
 	.services-card img {
@@ -2162,6 +2210,12 @@ header {
 	.lp-ss-title h3 {
 		font-size: 22px;
 	}
+	.restoration-button a {
+		padding: 15px 40px;
+	}
+	.card-content p {
+		font-size: 14px;
+	}
 }
 @media screen and (max-width: 540px) {
 	.lp-ts-card-sutitle p,
@@ -2301,6 +2355,9 @@ header {
 	.sixth-slide-title h1,
 	.lp-example-title h1 {
 		font-size: 34px;
+	}
+	.restoration-button a {
+		padding: 15px 20px;
 	}
 }
 @media screen and (max-width: 420px) {
