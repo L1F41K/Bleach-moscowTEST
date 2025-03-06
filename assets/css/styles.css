@@ -1051,7 +1051,7 @@ header {
 }
 .services-card {
 	/* max-width: 360px; */
-	max-height: 860px;
+	/* max-height: 860px; */
 	display: flex;
 	flex-direction: column;
 	margin-top: 50px;
@@ -1485,25 +1485,47 @@ header {
 .swiper-container {
 	margin-top: 40px;
 	width: 100%;
-	height: 400px; /* Фиксированная высота */
 	overflow: hidden;
 }
 
 /* Стили для слайдов */
 .swiper-slide {
-	width: 20%; /* Каждый слайд занимает 20% ширины экрана */
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #f0f0f0; /* Фон слайда */
+	width: 30vw; /* Ширина слайда — 30% от ширины экрана */
+	height: 30vw; /* Высота слайда — 30% от ширины экрана, делаем его квадратным */
+	max-width: 400px; /* Максимальная ширина слайда */
+	max-height: 400px; /* Максимальная высота слайда */
 }
 
 /* Стили для изображений */
 .swiper-slide img {
-	width: 100%; /* Изображение занимает всю ширину слайда */
+	width: 100%; /* Изображение растягивается по ширине слайда */
 	height: 100%; /* Изображение занимает всю высоту слайда */
-	object-fit: cover; /* Растягиваем изображение, сохраняя пропорции */
+	object-fit: cover; /* Изображение сохраняет свои пропорции и обрезается, если нужно */
 }
+
+/* Медиазапрос для экранов до 830px */
+@media (max-width: 830px) {
+	.swiper-slide {
+		width: 45vw; /* Слайды занимают 45% от ширины экрана */
+		height: 45vw; /* Высота слайда — 45% от ширины экрана, остаются квадратными */
+		max-width: 400px; /* Максимальная ширина слайда */
+		max-height: 400px; /* Максимальная высота слайда */
+	}
+}
+
+/* Медиазапрос для экранов меньше 580px (если нужно еще адаптировать для маленьких экранов) */
+@media (max-width: 580px) {
+	.swiper-slide {
+		width: 80vw; /* Слайды занимают 60% от ширины экрана */
+		height: 80vw; /* Высота слайда — 60% от ширины экрана, остаются квадратными */
+		max-width: 350px; /* Максимальная ширина слайда */
+		max-height: 350px; /* Максимальная высота слайда */
+	}
+}
+
 .brands {
 	padding-top: 150px;
 }
@@ -1815,7 +1837,7 @@ header {
 		padding-left: 120px;
 	}
 }
-@media screen and (max-width: 1134px) {
+@media screen and (max-width: 1135px) {
 	.ts-card-button {
 		display: none;
 	}
@@ -1834,6 +1856,9 @@ header {
 	}
 	.eighth-slide-contacts {
 		margin-left: 70px;
+	}
+	.brands-cards {
+		justify-content: center;
 	}
 }
 
@@ -1975,18 +2000,37 @@ header {
 		justify-content: center;
 		align-items: center;
 	}
-	.services-card {
-		padding-top: 20px;
-	}
 	.services-cards {
-		max-width: 50%;
+		width: 100%;
 		margin-top: 70px;
+		display: block; /* Блоковое отображение для контейнера карточек */
 	}
-	.services-cards-title {
-		margin-bottom: 0;
+
+	.services-cards-line {
+		display: block; /* Карточки будут идти по одной, каждая на новой строке */
 	}
+
+	.services-card {
+		width: 100%; /* Каждая карточка будет занимать 100% ширины */
+		margin-bottom: 15px; /* Отступ между карточками */
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		text-align: center;
+		height: auto; /* Карточка будет адаптироваться по высоте */
+		min-height: calc(100vh - 85px);
+		padding: 0;
+	}
+
+	.services-card img {
+		width: 100%; /* Изображение будет растягиваться по ширине */
+		height: auto; /* Высота изображения будет адаптироваться */
+		max-height: 600px; /* Ограничиваем максимальную высоту изображения */
+	}
+
 	.services-card-button {
-		margin-top: 20px;
+		margin-top: 20px; /* Фиксированный отступ между текстом и кнопкой */
 	}
 	.contacts {
 		padding-bottom: 20px;
@@ -2054,11 +2098,25 @@ header {
 		margin: 40px auto;
 		margin-bottom: 0;
 	}
+	.brand-title h1 {
+		font-size: 40px;
+	}
 }
-@media screen and (max-width: 725px) {
-	.services-card img {
-		height: 235px;
-		width: 85%;
+@media screen and (max-width: 763px) {
+	.brands-cards {
+		justify-content: center;
+	}
+}
+@media screen and (max-width: 720px) {
+	.right,
+	.left {
+		max-width: calc(80% - 10px);
+	}
+	.solo-text {
+		max-width: 800px;
+	}
+	.brands-cards {
+		font-size: 14px;
 	}
 }
 @media screen and (max-width: 660px) {
@@ -2154,13 +2212,6 @@ header {
 	.gallery-slide-subtitle p {
 		font-size: 16px;
 	}
-	.services-cards {
-		max-width: 70%;
-		margin-top: 70px;
-	}
-	.services-card-price p {
-		font-size: 16px;
-	}
 	.services-card-text p {
 		font-size: 12px;
 	}
@@ -2198,25 +2249,76 @@ header {
 	.first-image {
 		display: none;
 	}
-	.services-card img {
-		max-height: 336px;
-		width: 100%;
-	}
-	.services-card-title {
-		text-align: center;
-	}
-	.services-card-price {
-		text-align: center;
-	}
-	.services-card-text {
-		text-align: center;
-	}
+
 	.services-card-button {
 		margin-left: auto;
 		margin-right: auto;
 	}
 	.link-slide-button p {
 		font-size: 14px;
+	}
+	.services-title {
+		max-width: 472px;
+	}
+	.custom-slider {
+		height: 70vh;
+	}
+	.card-content {
+		padding: 30px 10px;
+	}
+	.custom-slider-prev {
+		left: 0;
+	}
+	.custom-slider-next {
+		right: 0;
+	}
+	.card-content p {
+		font-size: 16px;
+	}
+	.brands-price {
+		font-size: 16px;
+		color: #000;
+		margin: 0;
+		margin-top: 15px;
+	}
+
+	.brands-caption p {
+		color: #686868;
+		font-size: 10px;
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	.brand-solo-text {
+		max-width: 100%; /* Задаем максимальную ширину на 100% родителя */
+		width: 100%; /* Ширина текста на 100% родительского контейнера */
+		white-space: normal; /* Убираем запрет на перенос */
+		word-wrap: break-word; /* Разрешаем перенос слов, если они не помещаются */
+		overflow-wrap: break-word;
+		text-align: center; /* Выравнивание по центру (если нужно) */
+	}
+
+	/* Контейнер карточки */
+	.brand-solo-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%; /* Обеспечиваем, чтобы контейнер был достаточно широким */
+		box-sizing: border-box; /* Включаем padding и border в общую ширину */
+	}
+
+	/* Стили для изображения */
+	.brand-solo-img img {
+		max-width: 100%; /* Изображение не выйдет за пределы родителя */
+		height: auto; /* Сохраняем пропорции изображения */
+		object-fit: cover; /* Если изображение не помещается, оно будет обрезаться */
+	}
+	.brand-title {
+		max-width: none;
+	}
+	.brand-title h1 {
+		font-size: 30px;
 	}
 }
 @media screen and (max-width: 570px) {
@@ -2228,6 +2330,10 @@ header {
 	}
 	.card-content p {
 		font-size: 14px;
+	}
+	.right,
+	.left {
+		max-width: calc(90% - 10px);
 	}
 }
 @media screen and (max-width: 540px) {
@@ -2247,6 +2353,9 @@ header {
 	}
 	.lp-ts-card {
 		padding-left: 20px;
+	}
+	.brand-solo-text {
+		font-size: 12px;
 	}
 }
 @media screen and (max-width: 520px) {
@@ -2372,6 +2481,31 @@ header {
 	.restoration-button a {
 		padding: 15px 20px;
 	}
+	.services-title {
+		max-width: 400px;
+	}
+	.services-title h1 {
+		font-size: 40px;
+	}
+	.card-content p {
+		font-size: 12px;
+	}
+	.restoration-subtitle {
+		font-size: 14px;
+	}
+	.right,
+	.left {
+		max-width: calc(100% - 10px);
+	}
+	.search-input {
+		max-width: 100px;
+	}
+	.brand-title {
+		max-width: none;
+	}
+	.brand-title h1 {
+		font-size: 26px;
+	}
 }
 @media screen and (max-width: 420px) {
 	.ts-cards-top .third,
@@ -2392,6 +2526,30 @@ header {
 		font-size: 10px;
 		font-weight: 300;
 		color: #aeaeae;
+	}
+	.services-title {
+		max-width: 350px;
+	}
+	.services-title h1 {
+		font-size: 36px;
+	}
+	.services-subtitle h2 {
+		font-size: 28px;
+	}
+	.solo-text {
+		font-size: 12px;
+	}
+	.price-list {
+		font-size: 12px;
+	}
+	.price-list h2 {
+		font-size: 32px;
+	}
+	.brand-title h1 {
+		font-size: 26px;
+	}
+	.brand-title {
+		max-width: none;
 	}
 }
 @media screen and (max-width: 384px) {
@@ -2415,6 +2573,12 @@ header {
 	}
 	.lp-example {
 		margin-top: 20px;
+	}
+	.brands-cards {
+		padding: 0;
+	}
+	.brand-title h1 {
+		font-size: 22px;
 	}
 }
 @media screen and (max-width: 370px) {
@@ -2487,6 +2651,9 @@ header {
 		font-size: 12px;
 		text-align: left;
 	}
+	.card-content h2 {
+		font-size: 28px;
+	}
 }
 @media screen and (max-width: 350px) {
 	.lp-ts-card-img img {
@@ -2508,5 +2675,20 @@ header {
 	.sixth-slide-title h1,
 	.lp-example-title h1 {
 		font-size: 28px;
+	}
+	.services-title {
+		max-width: 320px;
+	}
+	.services-title h1 {
+		font-size: 32px;
+	}
+	.search-form {
+		margin-right: 7px;
+	}
+	.brand-title {
+		max-width: none;
+	}
+	.brand-title h1 {
+		font-size: 22px;
 	}
 }
